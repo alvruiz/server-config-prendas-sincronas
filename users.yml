@@ -1,14 +1,14 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   config:
     activate:
       on-profile: default
   application:
-    name: clothing
+    name: users
   datasource:
-    url: jdbc:mysql://${garment-db:localhost}:3306/garment-db
+    url: jdbc:mysql://${users-db:localhost}:3306/users-db
     username: root
     password: 12345
   jpa:
@@ -34,7 +34,7 @@ spring:
     activate:
       on-profile: test
   application:
-    name: garment
+    name: users
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
